@@ -7,9 +7,9 @@ int main() {
 
 	preencheMatrix();
 	printMatrix();
-	DFS(&p);
+	//DFS(&p);
 
-	PImprime(&p);
+	//PImprime(&p);
 
 	return 0;
 }

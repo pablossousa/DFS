@@ -42,8 +42,9 @@ void PImprime(Pilha *p){
 }
 
 
-void printMatrix() {
-	for (int i = 0; i < tamanhoMatrix; i++) {
+void printMatrix(){
+	for (int i = 0; i < tamanhoMatrix; i++)
+	{
 		for (int j = 0; j < tamanhoMatrix; j++)
 			printf("%d ",matrix[i][j]);
 		printf("\n");
@@ -54,35 +55,27 @@ void printMatrix() {
 void preencheMatrix(){
     FILE *f;
 	char arquivo[80];
-	char barreira[100];
 	int barreirai,barreiraj;
 	printf("Qual o nome do arquivo do labirinto? (Max 80)\n");
 	fgets(arquivo,80,stdin);
 	arquivo[strlen(arquivo)-1]='\0';
-    if (!(f=fopen(arquivo,"r"))) {
+    if(!(f=fopen(arquivo,"r"))){
         printf("Erro ao abrir arquivo.\n");
         exit(1);
     }
 	fscanf(f,"%d",&tamanhoMatrix);
-	fclose(f);
 	matrix=(int**) malloc(sizeof(int*)*(tamanhoMatrix+1));
-	for (int i = 0; i < tamanhoMatrix+1; i++) {
+	for (int i = 0; i < tamanhoMatrix+1; i++){
 		matrix[i]=(int*)malloc(sizeof(int)*tamanhoMatrix);
 		for (int j = 0; j < tamanhoMatrix; j++)
 			matrix[i][j]=0;
 	}
-	f=fopen(arquivo,"r");
-	fscanf(f,"%s",barreira);
-	fscanf(f,"%s",barreira);
-	while (!feof (f)) {
-		barreirai=barreira[0]-'0';
-		barreiraj=barreira[2]-'0';
+	while(!feof (f)){
+		fscanf(f,"%d",&barreirai);
+		fgetc(f);
+		fscanf(f,"%d",&barreiraj);
 		matrix[barreirai][barreiraj]=1;
-		fscanf(f,"%s",barreira);
 	}
-	barreirai=barreira[0]-'0';
-	barreiraj=barreira[2]-'0';
-	matrix[barreirai][barreiraj]=1;
     fclose(f);
 }
 
