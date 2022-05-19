@@ -54,8 +54,8 @@ Execução:
 
 # Referências
 
-Utilizou-se como base de código o repositório de fila dinâmica: [mpiress/dynamic_stack](https://github.com/mpiress/dynamic_stack)
-E também o material sobre "BFS in 2d array": [BFS](https://www.geeksforgeeks.org/breadth-first-traversal-bfs-on-a-2d-array/) 
+Utilizou-se como base de código o repositório de pilha dinâmica: [mpiress/dynamic_stack](https://github.com/mpiress/dynamic_stack)<br>
+E também o material sobre "DFS in 2d array": [DFS](https://www.geeksforgeeks.org/depth-first-traversal-dfs-on-a-2d-array/)
 
 # Compilação e Execução
 
