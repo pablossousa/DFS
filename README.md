@@ -5,20 +5,22 @@ O nosso objetivo é descobrir quantas iterações um algoritmo de busca em profu
 Foi-se feito um programa com a seguinte lógica:    
 Existe uma pilha dinâmica **p** de posições (int i, int j) (Baseado de : [vide git](https://github.com/mpiress/dynamic_stack))
 
-1) A primeira função encontrada é *FPVazia()* (Baseado de : [vide git](https://github.com/mpiress/dynamic_stack)):
+1) Ao entrar no programa encontra-se uma rotina que abre um arquivo "Log.txt" onde iremos registrar o conteúdo da pilha de cada iteração em cada linha;
+
+2) A primeira função encontrada é *FPVazia()* (Baseado de : [vide git](https://github.com/mpiress/dynamic_stack)):
 
 >Função responsável por criar um espaço de memória para ser a cabeça da pilha. Para tanto, é utilizado a chamada de função nativa do C/C++ malloc, na qual qual recebe como referência o espaço a ser reservado por meio da diretriz sizeof. Nesse primeiro momento, o casting (i.e., conversão de um tipo void criado pelo malloc para um tipo específico) se torna opcional, sendo utilizado na codificação apenas para manter um único padrão de definição de função. Como pode ser observado no código disponibilizado, o endereço produzido pela execução do malloc é copiado para o ponteiro primeiro e último, mantendo ambos no mesmo endereço. O que significará que a pilha se encontra vazia. Por fim, apontamos o prox de ambos os ponteiros para NULL. 
 
->T -- tamanho da matriz quadrática
->i<sub>1</sub>,j<sub>1</sub>
->i<sub>2</sub>,j<sub>2</sub>
->i<sub>3</sub>,j<sub>3</sub>
->...
->i<sub>n</sub>,j<sub>n</sub>
->
->onde *i* é a linha de uma barreira n, e *j* a coluna de uma barreira n
+3) A segunda função encontrada é *preencheMatrix()*, que tem o objetivo de alocar e preencher uma matriz dinâmica "matrix" de forma a parecer um labirinto, sendo 0 caminho livre e 1 barreira. Informações de arquivos de formato:
+>T -- tamanho da matriz quadrática     
+>i<sub>1</sub>,j<sub>1</sub>       
+>i<sub>2</sub>,j<sub>2</sub>          
+>i<sub>3</sub>,j<sub>3</sub>       
+>...       
+>i<sub>n</sub>,j<sub>n</sub>      
+>        
+>onde *i* é a linha de uma barreira n, e *j* a coluna de uma barreira n  
 
-2) A segunda função *printMatrix()* mostra a matriz obtida após extração de arquivo. 
 
 3) A terceira função encontrada é *FFVazia(&f)* (Baseado de : [vide git](https://github.com/mpiress/dynamic_queue)):
 >Função responsável por criar um espaço de memória para ser a cabeça da fila. Para tanto, é utilizado a chamada de função nativa do C/C++ malloc, o qual recebe como referência o espaço a ser reservado por meio da diretriz sizeof. Nesse primeiro momento, o casting (i.e., conversão de um tipo void criado pelo malloc para um tipo específico) se torna opcional, sendo utilizado na codificação apenas para manter um único padrão de definição de função. Como pode ser observado no código disponibilizado, o endereço produzido pela execução do malloc é copiado para o ponteiro primeiro e último, mantendo ambos no mesmo endereço. O que significará que a fila se encontra vazia. Por fim, apontamos o prox de ambos os ponteiros para NULL.    
