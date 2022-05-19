@@ -11,22 +11,19 @@ typedef struct Block Block;
 typedef struct Pilha Pilha;
 
 struct Item{
-	int lin;
-	int col;
+    int lin;
+    int col;
 };
 
 struct Block{
-	Item data;
-	Block *prox;
+    Item data;
+    Block *prox;
 };
 
 struct Pilha{
-	Block *base;
-	Block *top;
+    Block *base;
+    Block *top;
 };
-
-int tamanhoMatrix;
-int **matrix;
 
 void FPVazia(Pilha *p);
 void Push(Pilha *p, Item d);
@@ -36,4 +33,6 @@ void preencheMatrix();
 void printMatrix();
 int DFS(Pilha *p);
 bool isValid(int lin, int col);
+void logFila(Pilha *pilha);
+
 #endif
