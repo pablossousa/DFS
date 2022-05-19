@@ -58,6 +58,12 @@ Execução:
 	<img src="imgs/exec.jpg"/> 
 </p> 
 
+Log.txt:
+</p>
+<p align="center">
+	<img src="imgs/logtxt.jpg"/> 
+</p>
+
 # Referências
 
 Utilizou-se como base de código o repositório de pilha dinâmica: [mpiress/dynamic_stack](https://github.com/mpiress/dynamic_stack)<br>
