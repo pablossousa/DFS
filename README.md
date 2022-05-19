@@ -27,13 +27,13 @@ Existe uma pilha dinâmica **p** de posições (int i, int j) (Baseado de : [vid
 5) A seguir a função *DFS(&p)* retorna as iterações da seguinte maneira:   
 - Coloca-se a posição {0,0} na pilha;      
 - Enquanto a posição verificada não for {T-1,T-1} e enquanto a pilha não estiver vazia:       
-  1- Iguala a posição verificada ao primeiro item da fila, e desenfilera o mesmo;        
+  1- Iguala a posição verificada ao primeiro item da pilha, e desenpilha o mesmo;        
   2- Verifica-se os vizinhos da posição e os adiciona na pilha:       
-    - Para cada adjacente, baixo, cima, esquerda, direita, verifica se a linha e coluna deles está no intervalo [0,T], se não é uma barreira (1) e se já não foi passado (2);
+    - Para cada adjacente, baixo, direita, cima, esquerda, verifica se a linha e coluna deles estão no intervalo de [{0,0},{T-1,T-1}], se não é uma barreira (1) e se já não foi passado (2);
    
   3- Adiciona um à váriavel *iteracoes* que será retornada;      
 - Imprime se conseguiu chegar no final ou não;     
-- Retorna as iteracoes.
+- Retorna as iterações.
 
 6) Repete-se *printMatrix()* mostrando a matriz com o caminho percorrido 1=barreira, 0=caminho não percorrido, 2=caminho percorrido.
 
