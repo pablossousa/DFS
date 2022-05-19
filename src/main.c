@@ -1,16 +1,26 @@
 #include "pilha.h"
 
 int main() {
-	Pilha p;
-	int iteracoes;
 
-	FPVazia(&p);
+    FILE *arquivo;
+    arquivo=fopen("Log.txt","w");
+    fprintf(arquivo, "%s","Inicio:\n");
+    fclose(arquivo);
 
-	preencheMatrix();
-	printMatrix();
-	iteracoes=DFS(&p);
-	printf("Foram necessarias %d iteracoes para chegar a essa conclusao.\n",iteracoes);
-	printMatrix();
+    Pilha p;
+    int iteracoes;
 
-	return 0;
+    FPVazia(&p);
+
+    preencheMatrix();
+    printMatrix();
+    iteracoes=DFS(&p);
+    printf("Foram necessarias %d iteracoes para chegar a essa conclusao.\n",iteracoes);
+    printMatrix();
+
+    arquivo=fopen("Log.txt","a");
+    fprintf(arquivo, "%s","Fim.");
+    fclose(arquivo);
+
+    return 0;
 }
