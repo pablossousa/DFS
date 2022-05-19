@@ -55,13 +55,13 @@ Arquivo:
 Execução:
 </p>
 <p align="center">
-	<img src="imgs/exec.jpg"/> 
+	<img src="imgs/exec.png"/> 
 </p> 
 
 Log.txt:
 </p>
 <p align="center">
-	<img src="imgs/logtxt.jpg"/> 
+	<img src="imgs/logtxt.png"/> 
 </p>
 
 # Referências
