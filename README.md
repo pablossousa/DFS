@@ -41,11 +41,17 @@ Obs.:
 - O arquivo deve ser dado na mesma maneira que o apresentado.
 # Exemplo de execução
 Arquivo:
->6
->0,1
->2,0
->3,2
->1,2
+>7
+>0,4
+>1,4
+>2,2
+>2,5
+>4,1
+>4,4
+>5,5
+>6,1
+>6,3
+
 Execução:
 </p>
 <p align="center">
