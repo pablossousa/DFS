@@ -1,4 +1,4 @@
-# DFS-Test
+# DFS
 
 O nosso objetivo é descobrir quantas iterações um algoritmo de busca em profundidade (DFS - Deep First Search) necessita para chegar no final de uma matriz
 # Lógica
